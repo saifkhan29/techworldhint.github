@@ -1,0 +1,355 @@
+@import url("https://fonts.googleapis.com/css2?family=Squada+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f5f3f4;
+}
+
+.mainInfo {
+  height: 100%;
+  width: 80%;
+  margin: 50px auto;
+  background-color: #edf2fb;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  font-family: "Roboto", sans-serif;
+}
+
+@media (max-width: 750px) {
+  .mainInfo {
+    width: 98%;
+    font-size: .8rem;
+  }
+  .mainImage {
+    height: 100% !important;
+    width: 100% !important;
+  }
+  .laptopNameImage {
+    width: 100%;
+  }
+  .side1Content {
+    padding-left: 1px !important;
+    padding-right: 1px;
+  }
+}
+
+@media (max-width: 600px){
+  .side1Content{
+    width: 30% !important;
+  }
+  .side2Content{
+    width: 35% !important;
+  }
+
+  .side3Content{
+    width: 35% !important;
+    font-size: .7rem;
+  }
+}
+@media (max-width: 400px){
+  .side1Content{
+    width: 30% !important;
+    font-size: .7rem !important;
+  }
+  .side2Content{
+    width: 30% !important;
+    font-size: .6rem !important;
+  }
+
+  .side3Content{
+    width: 50% !important;
+    font-size: .6rem !important;
+  }
+}
+
+.webButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.checkWebsite a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  background-color: #3d5a80;
+  padding: 10px;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin-right: 20px;
+}
+
+.checkWebsite:hover {
+  transform: scale(0.92);
+  opacity: 0.9;
+}
+.back:hover {
+  transform: scale(0.92);
+  opacity: 0.9;
+}
+
+.back a {
+  text-decoration: none;
+  color: white;
+  background-color: #3d5a80;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.laptopNameImage {
+  height: 100%;
+  width: 80%;
+  margin: 50px auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mainHeading2 {
+  margin: 30px 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 2.9rem;
+  letter-spacing: 5px;
+}
+
+.mainImageHolder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.mainImage {
+  width: 50%;
+  height: 50%;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.laptopName {
+  width: 100%;
+  padding-top: 30px;
+  margin-bottom: 30px !important;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.divLine {
+  margin: 0 auto 20px auto;
+  height: 0.5px;
+  opacity: 0.5;
+  width: 95%;
+  background-color: grey;
+}
+
+.mainInfoContent {
+  display: flex;
+  flex-direction: row;
+}
+
+.side1Content {
+  width: 20%;
+  padding-left: 10px;
+  padding-top: 20px;
+  font-weight: 600;
+  font-size: 1rem;
+}
+.side2Content {
+  width: 30%;
+}
+
+.side2Content div {
+  margin: 20px 0;
+}
+
+.side3Content {
+  width: 50%;
+  padding-left: 50px;
+}
+
+.side3Content div {
+  margin: 20px 0;
+}
+
+/* start of navbar */
+
+nav {
+  height: 10vh;
+  background-color: #0077b6;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  width: 70%;
+
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: auto;
+}
+
+.nav-links li a {
+  color: #caf0f8;
+  font-family: "Squada One", cursive;
+  font-size: 1.5rem;
+  text-decoration: none;
+  z-index: 1000;
+}
+
+.nav-links li a:hover {
+  font-size: 1.7rem;
+  color: gold;
+}
+
+@media screen and (max-width: 940px) {
+  .line {
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    margin: 5px;
+    z-index: 1000;
+  }
+
+  nav {
+    position: relative;
+  }
+
+  .hamburger {
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    z-index: 400;
+    transform: translate(-50%, -50%);
+  }
+
+  .nav-links {
+    position: fixed;
+    background-color: #0077b6;
+    height: 100vh;
+    flex-direction: column;
+    /* display: none; */
+    width: 100%;
+    z-index: 100;
+    clip-path: circle(0px at 90% -10%);
+    -webkit-clip-path: circle(0px at 90% -10%);
+    transition: all 1s ease-out;
+  }
+  .nav-links.open {
+    clip-path: circle(1000px at 90% -10%);
+    -webkit-clip-path: circle(1000px at 90% -10%);
+  }
+  .landing {
+    flex-direction: column;
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+  .nav-links li a {
+    font-size: 2rem;
+    color: #fff;
+  }
+  .nav-links li a:hover {
+    font-size: 2.7rem;
+    color: gold;
+  }
+  .nav-links li:nth-child(1) {
+    transition: all 1.5s ease 0.2s;
+  }
+  .nav-links li:nth-child(2) {
+    transition: all 1.5s ease 0.4s;
+  }
+  .nav-links li:nth-child(3) {
+    transition: all 1.5s ease 0.6s;
+  }
+  .nav-links li:nth-child(4) {
+    transition: all 1.5s ease 0.8s;
+  }
+  .nav-links li:nth-child(5) {
+    transition: all 1.5s ease 1s;
+  }
+  li.fade {
+    opacity: 1 !important;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .section1Content {
+    width: 100% !important;
+  }
+  .mainText {
+    width: 100% !important;
+  }
+}
+
+/* end of navbar */
+
+/* start of footer */
+footer {
+  height: 45vh;
+  background-color: gray;
+  font-family: "Roboto", sans-serif;
+}
+
+@media (max-width: 550px) {
+  .footerTitle {
+    font-size: 1.5rem !important;
+    letter-spacing: 10px !important;
+  }
+}
+
+.footerTitle {
+  height: 25%;
+  background-color: #212529;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  letter-spacing: 20px;
+  font-weight: 800;
+  color: #ced4da;
+}
+
+.footerContent {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #343a40;
+}
+
+.footerContent div:nth-of-type(1):hover {
+  color: gold;
+  cursor: pointer;
+  transform: scale(1.05);
+}
+.footerContent div:nth-of-type(2):hover {
+  color: gold;
+  cursor: pointer;
+  transform: scale(1.05);
+}
+.footerContent div:nth-of-type(3):hover {
+  color: gold;
+  cursor: pointer;
+  transform: scale(1.05);
+}
+.footerContent div:nth-of-type(4):hover {
+  color: gold;
+  cursor: pointer;
+  transform: scale(1.05);
+}
+/* end of footer */
