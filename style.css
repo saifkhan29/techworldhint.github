@@ -242,7 +242,7 @@ body {
 
 @media (max-width: 400px){
   .bestLaptops h2{
-    font-size: 1rem !important;
+    font-size: .9rem !important;
     padding: 0 5px !important;
   }
 }
@@ -315,6 +315,7 @@ body {
   cursor: pointer;
   color: #fff;
   text-decoration: none;
+  outline: none;
 }
 
 .cardButtonText:hover {
