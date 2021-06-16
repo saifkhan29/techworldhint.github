@@ -76,7 +76,7 @@ nav {
     z-index: 100;
     clip-path: circle(0px at 90% -10%);
     -webkit-clip-path: circle(0px at 90% -10%);
-    transition: all 1s ease-out;
+    
   }
   .nav-links.open {
     clip-path: circle(1000px at 90% -10%);
