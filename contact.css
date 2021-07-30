@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Squada+One&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 *{
     margin: 0;
     padding: 0; 
@@ -84,7 +84,7 @@ nav{
         z-index: 100;
         clip-path: circle(0px at 90% -10%);
         -webkit-clip-path: circle(0px at 90% -10%);
-        
+        transition: all 1s ease-out;
     }
     .nav-links.open{
         clip-path: circle(1000px at 90% -10%);
@@ -143,32 +143,54 @@ nav{
 
 /* end of navbar */
 
+body{
+    background: #d9a7c7;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #fffcdc, #d9a7c7);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #fffcdc, #d9a7c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
+}
 
-.section1{
-    height: 90vh;
+.dflexr{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #014f86;
+    flex-direction: row;
+}
+.dflexc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-h1{
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    font-family: cursive;
-    font-size: 3rem;
-    color: #89c2d9;
-}
-
-h1:hover{
-    cursor: pointer;
-    color: gold;
-    transform: scale(1.15);
+.imageSize{
+    height: 350px !important;
+    width: 500px !important;
 }
 
 @media (max-width: 400px){
-    h1{
-        font-size: 1.5rem !important;
+    .imageSize{
+        height: 250px !important;
+        width: 350px !important;
     }
 }
+
+
+/* start of section 1 */
+
+h1{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+}
+
+.containerColor{
+    background-color: #fff;
+}
+
+.line1{
+    width: 100%;
+    margin: 30px 0;
+    background-color: rgb(168, 166, 166);
+    height: 2px;
+}
+/* end start of section 1 */
